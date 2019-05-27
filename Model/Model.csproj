@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="DataProvider.cs" />
-    <Compile Include="Model1.cs" />
+    <Compile Include="LibraryOnlineEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

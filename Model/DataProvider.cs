@@ -25,11 +25,11 @@ namespace Model
             }
         }
 
-        public Model1 db { get; set; }
+        public LibraryOnlineEntities db { get; set; }
 
         private DataProvider()
         {
-            db = new Model1();
+            db = new LibraryOnlineEntities();
         }
     }
 }

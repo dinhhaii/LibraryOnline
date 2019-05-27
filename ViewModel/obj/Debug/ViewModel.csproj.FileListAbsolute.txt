@@ -1,0 +1,15 @@
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\ViewModel.dll.config
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\EntityFramework.dll
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\Model.dll
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\Model.pdb
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\Model.dll.config
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\EntityFramework.xml
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\obj\Debug\ViewModel.csprojAssemblyReference.cache
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\obj\Debug\ViewModel.csproj.CopyComplete
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\Dinh Hai\Desktop\LibraryOnline\ViewModel\obj\Debug\ViewModel.pdb

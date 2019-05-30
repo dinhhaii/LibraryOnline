@@ -23,6 +23,7 @@ namespace View
         public MainWindow()
         {
             InitializeComponent();
+            var temp = lvBook.SelectedItem;
         }
     }
 }

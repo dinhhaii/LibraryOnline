@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:View"
         xmlns:vms="clr-namespace:ViewModel;assembly=ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1000"
+        Title="MainWindow" Height="500" Width="1000"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -19,70 +19,72 @@
     <Window.DataContext>
         <vms:BookViewModel></vms:BookViewModel>
     </Window.DataContext>
+
     <Grid>
-        <ScrollViewer>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                    <ColumnDefinition Width="5*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                
-                <StackPanel Margin="20,20,20,10">
-                    <TextBlock FontWeight="Bold">Name:</TextBlock>
-                    <TextBox Name="txtName" Text="{Binding SelectedItem.name, ElementName=lvBook, Mode=OneWay}"></TextBox>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-                    <TextBlock FontWeight="Bold">Category:</TextBlock>
-                    <TextBox Name="txtCategory" Text="{Binding SelectedItem.category, ElementName=lvBook, Mode=OneWay}"></TextBox>
+        <StackPanel Name="stpInput" Margin="20,20,20,10">
+            <TextBlock FontWeight="Bold">ID:</TextBlock>
+            <TextBox Name="txtID" IsEnabled="False" Text="{Binding SelectedItem.id, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <TextBlock FontWeight="Bold">Amount:</TextBlock>
-                    <TextBox Name="txtAmount" Text="{Binding SelectedItem.amount, ElementName=lvBook, Mode=OneWay}"></TextBox>
+            <TextBlock FontWeight="Bold">Name:</TextBlock>
+            <TextBox Name="txtName" Text="{Binding SelectedItem.name, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <TextBlock FontWeight="Bold">Price:</TextBlock>
-                    <TextBox Name="txtPrice" Text="{Binding SelectedItem.price, ElementName=lvBook, Mode=OneWay}"></TextBox>
+            <TextBlock FontWeight="Bold">Category:</TextBlock>
+            <TextBox Name="txtCategory" Text="{Binding SelectedItem.category, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <TextBlock FontWeight="Bold">Size:</TextBlock>
-                    <TextBox Name="txtSize" Text="{Binding SelectedItem.size, ElementName=lvBook, Mode=OneWay}"></TextBox>
+            <TextBlock FontWeight="Bold">Amount:</TextBlock>
+            <TextBox Name="txtAmount" Text="{Binding SelectedItem.amount, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <TextBlock FontWeight="Bold">Author:</TextBlock>
-                    <TextBox Name="txtAuthor" Text="{Binding SelectedItem.author, ElementName=lvBook, Mode=OneWay}"></TextBox>
+            <TextBlock FontWeight="Bold">Price:</TextBlock>
+            <TextBox Name="txtPrice" Text="{Binding SelectedItem.price, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <TextBlock FontWeight="Bold">Publication Date:</TextBlock>
-                    <TextBox Name="txtPublicationDate" Text="{Binding SelectedItem.publicationdate, ElementName=lvBook, Mode=OneWay}"></TextBox>
+            <TextBlock FontWeight="Bold">Size:</TextBlock>
+            <TextBox Name="txtSize" Text="{Binding SelectedItem.size, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <TextBlock FontWeight="Bold">Publishing Company:</TextBlock>
-                    <TextBox Name="txtPublishCompany" Text="{Binding SelectedItem.publishcompany, ElementName=lvBook, Mode=OneWay}"></TextBox>
+            <TextBlock FontWeight="Bold">Author:</TextBlock>
+            <TextBox Name="txtAuthor" Text="{Binding SelectedItem.author, ElementName=lvBook, Mode=OneWay}"></TextBox>
 
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button
+            <TextBlock FontWeight="Bold">Publication Date:</TextBlock>
+            <TextBox Name="txtPublicationDate" Text="{Binding SelectedItem.publicationdate, ElementName=lvBook, Mode=OneWay}"></TextBox>
+
+            <TextBlock FontWeight="Bold">Publishing Company:</TextBlock>
+            <TextBox Name="txtPublishCompany" Text="{Binding SelectedItem.publishcompany, ElementName=lvBook, Mode=OneWay}"></TextBox>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button
                             Style="{StaticResource MaterialDesignRaisedButton}"
                             Width="70" Margin="0,10,10,10"
                             Command="{Binding AddCommand}"
-                            CommandParameter="{Binding SelectedItem, ElementName=lvBook}">     
-                            ADD
-                        </Button>
-                        <Button
+                            CommandParameter="{Binding Children, ElementName=stpInput}">
+                    ADD
+                </Button>
+                <Button
                             Style="{StaticResource MaterialDesignRaisedButton}"
                             Width="100" Margin="0,10,10,10"
                             Command="{Binding DeleteCommand}"
-                            CommandParameter="{Binding SelectedItem, ElementName=lvBook}">        
-                            DELETE
-                        </Button>
-                        <Button
+                            CommandParameter="{Binding SelectedItem, ElementName=lvBook}">
+                    DELETE
+                </Button>
+                <Button
                             Style="{StaticResource MaterialDesignRaisedButton}"
                             Width="100" Margin="0,10,10,10"
                             Command="{Binding UpdateCommand}"
-                            CommandParameter="{Binding SelectedItem, ElementName=lvBook}">    
-                            UPDATE
-                        </Button>
-                    </StackPanel>
-                    
-                </StackPanel>
+                            CommandParameter="{Binding Children, ElementName=stpInput}">
+                    UPDATE
+                </Button>
+            </StackPanel>
 
-                
+        </StackPanel>
 
+
+        <Grid Grid.Column="1">
+            <ScrollViewer>
                 <ListView
-                    Name="lvBook"
-                    Grid.Column="1"
+                    Name="lvBook"                    
                     ItemsSource="{Binding listBook}">
                     <ListView.View>
                         <GridView>
@@ -117,9 +119,7 @@
                         </GridView>
                     </ListView.View>
                 </ListView>
-
-            </Grid>
-        </ScrollViewer>
+            </ScrollViewer>
+        </Grid>
     </Grid>
-    
 </Window>
